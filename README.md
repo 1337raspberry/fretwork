@@ -1,4 +1,4 @@
-# Fretwork - Expert Guitar Difficulty Analyzer
+# Fretwork V0.5 - Expert Guitar Difficulty Analyzer
 
 ![Render Example](https://github.com/Staycation44/fretwork/blob/main/renders/02139802_Dragonforce%20-%20Through%20The%20Fire%20Flames.png)
 
