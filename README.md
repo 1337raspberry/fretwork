@@ -5,7 +5,7 @@ This is an analysis tool intended to calculate Expert Guitar song difficulty fro
 Extension areas - Ideas I had, but wasn't able to complete:
 - Other song formats
 - Extend the approach to drums — untested, but a logical next step
-- A full strain-based difficulty metric (similar to osu!'s star rating), factoring in note state (strum/hopo/tap) & splitting out strum & fret rather than just density.
+- A full strain-based difficulty metric (similar to osu!'s star rating), factoring in note state (strum/hopo/tap) & splitting out strum vs fret rather than just note density.
 
 Libraries required are **pandas, numpy, tqdm, mido, and matplotlib** - everything else is in the base python install (as of 3.14.4 where this was built/tested)
 
