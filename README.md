@@ -6,6 +6,7 @@ Extension areas - Ideas I had, but wasn't able to complete:
 - Other song formats, difficulties other than expert
 - Extend the approach to drums — a logical next step
 - A full strain-based difficulty metric (similar to osu!'s star rating), factoring in note state (strum/hopo/tap) & splitting out strum vs fret rather than just note density.
+- The real dream - integrating a refined version of this into a community game like YARG as an option for difficulty display
 
 Libraries required are **pandas, numpy, tqdm, mido, and matplotlib** - everything else is in the base python install (as of 3.14.4 where this was built/tested)
 
