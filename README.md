@@ -2,7 +2,7 @@
 
 ![Render Example](https://github.com/Staycation44/fretwork/blob/main/renders/02139802_Dragonforce%20-%20Through%20The%20Fire%20Flames.png)
 
-This is an analysis tool intended to calculate Expert Guitar song difficulty from .chart & .mid files (Guitar Hero, Rock Band, Clone Hero, YARG) using Notes Per Second (note density) & Variability Per Second (fret change) metrics. This started as a way to learn some python and see if I could even begin to calculate difficulty from song data and a few months later is a much larger & more complex project than I first expected.
+This is an analysis tool intended to calculate Expert Guitar song difficulty from .chart & .mid files (Guitar Hero, Rock Band, Clone Hero, YARG) using Notes Per Second (note density) & Variability Per Second (fret change) metrics. This started as a way to learn python and see if I could even begin to calculate difficulty from song data. A few months later it is a much larger and more complex project than I first expected.
 
 Extension areas - Ideas I had, but wasn't able to complete:
 - Other song formats, difficulties other than expert
