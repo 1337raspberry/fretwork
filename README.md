@@ -26,7 +26,7 @@ Before running anything, open `config.py` and check these values:
 | `SEARCH_PATH` | Sets the folder to cache/analyze | `"C:\Users\[user]\Documents\Clone Hero\Songs"` |
 | `HEADER` | A short name for the library, becomes the prefix on every output file | `"Library"` |
 
-`SEARCH_PATH` - this tool has only be tested on windows devices, but should work on Mac/Linux with updated file paths.
+`SEARCH_PATH` - this tool has only been tested on windows devices, but should work on Mac/Linux with updated file paths.
 
 `HEADER` is how Build defines a cache of song data, and how Analyze & Render search that cache. If you keep multiple libraries (e.g. different folders for officials vs customs), give each one its own `HEADER` so their outputs don't overwrite each other. 
 
