@@ -1,8 +1,11 @@
 # Fretwork - Expert Guitar Difficulty Analyzer
 
-This is an analysis tool intended to calculate Expert Guitar song difficulty from .chart & .mid files (Guitar Hero, Rock Band, Clone Hero, YARG) using Notes Per Second (note density) & Variability Per Second (fret change) metrics. This started as a way to learn some python and see if I could even begin to calculate difficulty from song data, took several twists and turns, and a few months later is a much larger, more complex project than I first expected.
+This is an analysis tool intended to calculate Expert Guitar song difficulty from .chart & .mid files (Guitar Hero, Rock Band, Clone Hero, YARG) using Notes Per Second (note density) & Variability Per Second (fret change) metrics. This started as a way to learn some python and see if I could even begin to calculate difficulty from song data and a few months later is a much larger & more complex project than I first expected.
 
-Ideally this can be picked up and extended, maybe attempting to create a full strain-style metric (like osu uses for stars), or including note state (strum/hopo/tap) in addition to the simpler density based metrics I'm using here. The difficulty formula could also probably be tweaked and optimized. I don't know if all the logic here could be applied to drums, but I also think that could be an interesting next step.
+Extension areas - Ideas I had, but wasn't able to complete:
+- Other song formats
+- Extend the approach to drums — untested, but a logical next step
+- A full strain-based difficulty metric (similar to osu!'s star rating), factoring in note state (strum/hopo/tap) & splitting out strum & fret rather than just density.
 
 Libraries required are **pandas, numpy, tqdm, mido, and matplotlib** - everything else is in the base python install (as of 3.14.4 where this was built/tested)
 
@@ -23,9 +26,9 @@ Before running anything, open `config.py` and check these values:
 | `SEARCH_PATH` | Sets the folder to cache/analyze | `"C:\Users\[user]\Documents\Clone Hero\Songs"` |
 | `HEADER` | A short name for the library, becomes the prefix on every output file | `"Library"` |
 
-`SEARCH_PATH` - this tool has only be tested on windows devices, but should work on Mac/Linux with updated filepaths.
+`SEARCH_PATH` - this tool has only be tested on windows devices, but should work on Mac/Linux with updated file paths.
 
-`HEADER` is how Build defines a cache of song data, and how Analyze & Render search that cache. If you keep multiple libraries (e.g. different folders for officials vs customs), give each one its own `HEADER` so their outputs don't overwrite eachother. 
+`HEADER` is how Build defines a cache of song data, and how Analyze & Render search that cache. If you keep multiple libraries (e.g. different folders for officials vs customs), give each one its own `HEADER` so their outputs don't overwrite each other. 
 
 All outputs are named: `{header}_{kind}_{timestamp}.{ext}`
 
