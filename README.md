@@ -53,7 +53,7 @@ Under `RENDER_DEFAULT` and `RENDER_THEMES`, you can tweak how `render.py's` PNGs
 
 ## 2. Building a cache
 
-This walks `SEARCH_PATH`, finds every `song.ini`, `notes.chart`, and `notes.mid`, reads them, and writes one cache file containing every song's note data and metadata. This is the slowest step (~10 minutes on a ~3k song library - more if more midi files, less if more charts).
+`build.py` walks `SEARCH_PATH`, finds every `song.ini`, `notes.chart`, and `notes.mid`, reads them, and writes one cache file containing every song's note data and metadata. This is the slowest step (~10 minutes on a ~3k song library - more if more midi files, less if more charts).
 
 By default this will run on the `SEARCH_PATH` & `HEADER` set in the config.
 
@@ -71,7 +71,7 @@ By default this will run on the `SEARCH_PATH` & `HEADER` set in the config.
 
 ## 3. Analyzing a cache
 
-Loads the most recent cache for `config.HEADER`, computes difficulty metrics for every song in it, and writes a CSV. This is the main output for browsing the library.
+`analyze.py` loads the most recent cache for your config's `HEADER`, computes difficulty metrics for every song in it, and writes a CSV. This is the main output for browsing the library.
 
 **What you get:**
 
@@ -191,7 +191,7 @@ RemapDiff is a classic 0–6 grouping, CalcTier is an open ended calculation tha
 python render.py [retrival code]
 ```
 
-Draws one PNG graph of note density over time for a specific song, using its retrieval code from the metrics CSV. Make sure the header in config matches the CSV/library you are rendering from.
+`render.py` draws one PNG graph of difficulty over time for a specific song, using its retrieval code from the metrics CSV. Make sure the header in config matches the CSV/library you are rendering from.
 
 **You can render several at once:**
 
@@ -213,7 +213,7 @@ One PNG per code, named `{code}_{Artist} - {Song}.png`, showing three lines:
 - **Notes** - note density per second
 - **Variability** - how much the fret pattern is changing per second
 
-Solo sections (and optionally star power, if enabled in the config) are shaded on the graph. The header of each image shows the song title/artist, charter, source, file format, and the D value / tier numbers from the metrics CSV.
+Solo sections (and optionally star power, if enabled in the config) are shaded on the graph. The header of each image shows the song title/artist, charter, source, file format, and the D value / tier numbers from the metrics CSV. Available in a light or dark mode depending on the config.
 
 **Other arguments:**
 - `--header` / `--cache`: pick which library/cache to pull from
