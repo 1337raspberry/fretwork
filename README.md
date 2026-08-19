@@ -185,6 +185,8 @@ RemapDiff is a classic 0–6 grouping, CalcTier is an open ended calculation tha
 
 ## 5. Rendering song graphs
 
+![Render Example](https://github.com/Staycation44/fretwork/blob/main/renders/02139802_Dragonforce%20-%20Through%20The%20Fire%20Flames.png)
+
 ```
 python render.py [retrival code]
 ```
