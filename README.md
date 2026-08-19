@@ -5,8 +5,8 @@
 This is an analysis tool intended to calculate Expert Guitar song difficulty from .chart & .mid files (Guitar Hero, Rock Band, Clone Hero, YARG) using Notes Per Second (note density) & Variability Per Second (fret change) metrics. This started as a way to learn some python and see if I could even begin to calculate difficulty from song data and a few months later is a much larger & more complex project than I first expected.
 
 Extension areas - Ideas I had, but wasn't able to complete:
-- Other song formats
-- Extend the approach to drums — untested, but a logical next step
+- Other song formats, difficulties other than expert
+- Extend the approach to drums — a logical next step
 - A full strain-based difficulty metric (similar to osu!'s star rating), factoring in note state (strum/hopo/tap) & splitting out strum vs fret rather than just note density.
 
 Libraries required are **pandas, numpy, tqdm, mido, and matplotlib** - everything else is in the base python install (as of 3.14.4 where this was built/tested)
