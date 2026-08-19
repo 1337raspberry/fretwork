@@ -107,9 +107,13 @@ This is a unique metric (as far as I can tell). VPS calculates fret movement bet
 >**Variability Examples:**
 >
 >G to G - no frets added or removed so v = 0
+>
 >G to Y - 1 fret removed, 1 fret added so v = 1
+>
 >G to GYB - 2 frets added so v = 2
+>
 >GYB back to G - 2 frets removed so v = 2
+>
 >GR to YBO - 2 frets removed, 3 frets added so v = 3
 >
 >If all of these happened within 1 second VPS would be 8
