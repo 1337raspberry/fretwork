@@ -1,0 +1,16 @@
+rb1 = Rock Band
+rb1dlc = Rock Band DLC
+rb2 = Rock Band 2
+rb2dlc = Rock Band 2 DLC
+rb3 = Rock Band 3
+rb3dlc = Rock Band 3 DLC
+rb4 = Rock Band 4
+rb4dlc = Rock Band 4 DLC
+rbdlc = Rock Band DLC
+rbn = Rock Band Network
+rbacdc = Rock Band: AC/DC
+lrb = Lego Rock Band
+lrbdlc = Lego Rock Band DLC
+gdrb = Green Day Rock Band
+gdrbdlc = Green Day Rock Band DLC
+rbb = Rock Band Blitz
