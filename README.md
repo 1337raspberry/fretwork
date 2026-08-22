@@ -216,7 +216,7 @@ One PNG per code, named `{code}_{Artist} - {Song}.png`, showing three lines:
 
 Solo sections (and optionally star power, if enabled in the config) are shaded on the graph. The header of each image shows the song title/artist, charter, source, file format, and the D value / tier numbers from the metrics CSV. Available in a light or dark mode depending on the config.
 
-**Other arguments:**
+**Optional arguments:**
 - `--header` / `--cache`: pick which library/cache to pull from
 - `--out-dir`: where to save the PNGs (defaults to `render_dir` in `config.py`)
 
