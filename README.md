@@ -5,7 +5,7 @@ This is an analysis tool intended to calculate Expert Guitar song difficulty fro
 Extension areas - Ideas I had, but wasn't able to complete:
 - Other song formats, difficulties other than expert
 - Extend the approach to drums — a logical next step
-- A full strain-based difficulty metric factoring in note state (strum/hopo/tap) and splitting strum vs fret (like osu's star ratings)
+- A more complete strain-based difficulty metric factoring in note state (strum/hopo/tap) and splitting strum vs fret.
 - The real dream - integrating a refined version of this into a community game like YARG as an option for difficulty display
 
 Libraries required are **pandas, numpy, tqdm, mido, and matplotlib** - everything else is in the base python install (as of 3.14.4 where this was built/tested)
@@ -31,12 +31,11 @@ Before running anything, open `config.py` and check these values:
 
 `SEARCH_PATH` - this tool has only been tested on windows devices, but should work on Mac/Linux with updated file paths.
 
-`HEADER` is how Build defines a cache of song data, and how Analyze & Render search that cache. If you keep multiple libraries (e.g. different folders for officials vs customs), give each one its own `HEADER` so their outputs don't overwrite each other. 
+`HEADER` is how Build defines a cache of song data, and how Analyze & Render search that cache. If you keep multiple libraries, give each one its own `HEADER` so their outputs don't overwrite each other. 
 
 All outputs are named: `{header}_{kind}_{timestamp}.{ext}`
 
-
-e.g. `Library_cache_08052026-0330.pkl`, `Library_metrics_08052026-0330.csv`.
+ex. `Library_cache_08052026-0330.pkl`, `Library_metrics_08052026-0330.csv`.
 
 You can also override `SEARCH_PATH` and `HEADER` on the command line (via `--search-path` / `--header`) instead of editing the file, if preferred.
 
@@ -44,7 +43,7 @@ You can also override `SEARCH_PATH` and `HEADER` on the command line (via `--sea
 
 Under `RENDER_DEFAULT` and `RENDER_THEMES`, you can tweak how `render.py's` PNGs look:
 
-- `mode`: `"dark"` or `"light"` — overall color theme
+- `mode`: `"dark"` or `"light"` to set overall color theme
 - `color_d`, `color_nps`, `color_vps`, `color_star_power`: line/fill colors
 - `figsize`, `dpi`: image size and resolution
 - `show_solo_spans` / `show_star_power_spans`: whether solo and star power sections are displayed on the graph
@@ -58,7 +57,7 @@ Under `RENDER_DEFAULT` and `RENDER_THEMES`, you can tweak how `render.py's` PNGs
 
 By default this will run on the `SEARCH_PATH` & `HEADER` set in the config.
 
-**What you get:**
+**Outputs:**
 
 - A `{header}_cache_{timestamp}.pkl` file — the main output, used by Analyze and Render
 - A `{header}_errors_{timestamp}.csv` file, only generated if some songs failed to parse, this lists which file failed and why (e.g. missing guitar track, corrupt midi file)
@@ -74,7 +73,7 @@ By default this will run on the `SEARCH_PATH` & `HEADER` set in the config.
 
 `analyze.py` loads the most recent cache for your config's `HEADER`, computes difficulty metrics for every song in it, and writes a CSV. This is the main output for browsing the library.
 
-**What you get:**
+**Outputs:**
 
 A CSV named `{header}_metrics_{timestamp}.csv`, containing a row per song including:
 
@@ -188,25 +187,19 @@ RemapDiff is a classic 0–6 grouping, CalcTier is an open ended calculation tha
 
 ## 5. Rendering song graphs
 
-```
-python render.py [retrival code]
-```
+`python render.py [retrival code]`
 
 `render.py` draws one PNG graph of difficulty over time for a specific song, using its retrieval code from the metrics CSV. Make sure the header in config matches the CSV/library you are rendering from.
 
 **You can render several at once:**
 
-```
-python render.py 04821993 71620045 09933120
-```
+`python render.py 04821993 71620045 09933120`
 
 **Or from a text file, one code per line:**
 
-```
-python render.py --codes-file picks.txt
-```
+`python render.py --codes-file picks.txt`
 
-**What you get:**
+**Outputs:**
 
 One PNG per code, named `{code}_{Artist} - {Song}.png`, showing three lines:
 
