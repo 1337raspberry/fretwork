@@ -127,7 +127,7 @@ VPS adds value for calculating overall difficulty since it can differ so much fr
 Difficulty (D) is calculated by multiplying together N (a combination of the median, average, and peak NPS values for a song), V (a combination of the median, average, and peak VPS values for a song) and COV (an interaction term that approximates how consistent a song is by adding in standard deviation for both NPS & VPS along with the median and average). The specific formula is described below.
 
 $$
-D = N \cdot V \cdot COV
+D = N \cdot V \cdot CoV
 $$
 
 ### Epsilon terms
@@ -164,13 +164,13 @@ $$
 COV measures how inconsistent the difficulty is and combines across NPS & VPS. COV has a floor of 1 so worst case we get raw N * V for an extremely consistent song, while more variable songs will score above 1. In practice this mostly buffs easier songs that have a hard solo, because most hard songs are fast/complex throughout with fewer breaks.
 
 $$
-COV = 1 + \sqrt{CV_N \cdot CV_V}
+CoV = 1 + \sqrt{CV_N \cdot CV_V}
 $$
 
 ### Final D Formula
 
 $$
-D = N \cdot V \cdot COV
+D = N \cdot V \cdot CoV
 $$
 
 
