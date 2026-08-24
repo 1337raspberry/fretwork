@@ -59,7 +59,7 @@ By default this will run on the `SEARCH_PATH` & `HEADER` set in the config.
 
 **Outputs:**
 
-- A `{header}_cache_{timestamp}.pkl` file — the main output, used by Analyze and Render
+- A `{header}_cache_{timestamp}.pkl` file, the main output used by Analyze and Render
 - A `{header}_errors_{timestamp}.csv` file, only generated if some songs failed to parse, this lists which file failed and why (e.g. missing guitar track, corrupt midi file)
 - A console summary: how many songs had a `song.ini`, how many had no readable guitar chart, how many errored, and how many made it into the cache
 
