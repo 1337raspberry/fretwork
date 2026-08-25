@@ -161,7 +161,7 @@ $$
 
 ### Interaction Term 
 
-COV approximate how inconsistent the difficulty is and combines across NPS & VPS. COV has a floor of 1 so worst case we get raw N * V for an extremely consistent song, while most songs will score above 1. In practice this mostly buffs easier songs that have a hard solo or a lot of rest between sections, because most hard songs are fast/complex throughout with fewer breaks. generally smooths out the rankings, but not driving the majority of the score.
+COV approximate how inconsistent the difficulty is and combines across NPS & VPS. COV has a floor of 1 so worst case we get raw N * V for an extremely consistent song, while most songs will score above 1. In practice this mostly buffs songs that have a lot of rest between sections which tank the averages.
 
 $$
 CoV = 1 + \sqrt{CV_N \cdot CV_V}
