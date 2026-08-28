@@ -28,7 +28,7 @@ Before running anything, open `config.py` and check these values:
 
 | Setting | What it does | Example |
 |---|---|---|
-| `SEARCH_PATH` | Sets the folder to cache/analyze | `"C:\Users\[user]\Documents\Clone Hero\Songs"` |
+| `SEARCH_PATH` | Sets the folder to cache/analyze | `r"C:\Users\[user]\Documents\Clone Hero\Songs"` |
 | `HEADER` | A short name for the library, becomes the prefix on every output file | `"Library"` |
 
 `SEARCH_PATH` - this tool has only been tested on windows devices, but should work on Mac/Linux with updated file paths.
